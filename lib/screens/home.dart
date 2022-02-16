@@ -10,28 +10,28 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final langeState = Provider.of<SwitchLangugae>(context, listen: true);
     return Scaffold(
+      // To Do transparent appBar following the design
       appBar: AppBar(
         title: Text(
           AppLocalizations.of(context)!.translate('home')!,
         ),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              AppLocalizations.of(context)!.translate('today')!,
+      // To Do three sections
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            AppLocalizations.of(context)!.translate('today')!,
+          ),
+          ElevatedButton(
+            onPressed: () {
+              langeState.switchLang(langeState.appLocal);
+            },
+            child: Text(
+              AppLocalizations.of(context)!.translate('chanage_languge')!,
             ),
-            ElevatedButton(
-              onPressed: () {
-                langeState.switchLang(langeState.appLocal);
-              },
-              child: Text(
-                AppLocalizations.of(context)!.translate('chanage_languge')!,
-              ),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

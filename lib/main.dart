@@ -43,6 +43,7 @@ class MyApp extends StatelessWidget {
               Locale('en'), // English, no country code
               Locale('ar'), // Arabic, no country code
             ],
+            // TO DO Import my custom theme
             theme: ThemeData(
               primarySwatch: Colors.blue,
             ),
