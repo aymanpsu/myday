@@ -2,11 +2,17 @@ import 'package:flutter/material.dart';
 import './screens/home.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import './utlis/app_lang.dart';
+import './utlis/app_theme.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import './providers/switch_language.dart';
 import './providers/switch_background.dart';
 
-void main() {
+Future main() async {
+  // To load the .env file contents into dotenv.
+  await dotenv.load(fileName: ".env");
+  // Load the app
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -23,7 +29,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<SwitchBackground>(
           create: (_) => SwitchBackground(),
         ),
-        // State for changing language
+        // State for changing language & font family
         ChangeNotifierProvider<SwitchLangugae>(
           create: (_) => SwitchLangugae(),
         )
@@ -31,7 +37,7 @@ class MyApp extends StatelessWidget {
       child: Consumer<SwitchLangugae>(
         builder: (ctx, langState, child) {
           return MaterialApp(
-            title: 'My day app',
+            title: 'My day',
             localizationsDelegates: const [
               AppLocalizations.delegate,
               GlobalMaterialLocalizations.delegate,
@@ -44,9 +50,7 @@ class MyApp extends StatelessWidget {
               Locale('ar'), // Arabic, no country code
             ],
             // TO DO Import my custom theme
-            theme: ThemeData(
-              primarySwatch: Colors.blue,
-            ),
+            theme: AppTheme(langState.appFontFamily).lightTheme,
             home: const HomePage(),
           );
         },
