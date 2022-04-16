@@ -20,9 +20,7 @@ class HomePage extends StatelessWidget {
         centerTitle: false,
         title: Text(
           AppLocalizations.of(context)!.translate('app_name')!,
-          style: const TextStyle(
-            fontWeight: FontWeight.bold,
-          ),
+          style: Theme.of(context).textTheme.titleLarge,
           textAlign: TextAlign.left,
         ),
         actions: [
@@ -41,7 +39,7 @@ class HomePage extends StatelessWidget {
         height: double.infinity,
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/background_1.jpeg'),
+            image: AssetImage('assets/images/background_1.jpeg'),
             fit: BoxFit.cover,
           ),
         ),

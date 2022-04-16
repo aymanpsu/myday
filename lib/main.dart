@@ -12,6 +12,7 @@ Future main() async {
   // To load the .env file contents into dotenv.
   await dotenv.load(fileName: ".env");
   // Load the app
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<SwitchBackground>(
           create: (_) => SwitchBackground(),
         ),
-        // State for changing language
+        // State for changing language & font family
         ChangeNotifierProvider<SwitchLangugae>(
           create: (_) => SwitchLangugae(),
         )
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
       child: Consumer<SwitchLangugae>(
         builder: (ctx, langState, child) {
           return MaterialApp(
-            title: AppLocalizations.of(context)!.translate('app_name')!,
+            title: 'My day',
             localizationsDelegates: const [
               AppLocalizations.delegate,
               GlobalMaterialLocalizations.delegate,
@@ -49,7 +50,7 @@ class MyApp extends StatelessWidget {
               Locale('ar'), // Arabic, no country code
             ],
             // TO DO Import my custom theme
-            theme: AppTheme().lightTheme,
+            theme: AppTheme(langState.appFontFamily).lightTheme,
             home: const HomePage(),
           );
         },
