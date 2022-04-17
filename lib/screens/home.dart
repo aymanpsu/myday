@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../utlis/app_lang.dart';
+import '../widgets/weather_section.dart';
 
 // **Use when you are ready tu plug state management**
 // import '../providers/switch_language.dart';
@@ -44,30 +45,31 @@ class HomePage extends StatelessWidget {
           ),
         ),
         child: SafeArea(
-          child: Column(
-            children: [
-              // TO Do Weather section
-              Flexible(
-                flex: 2,
-                child: Container(
-                  color: Colors.amber,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 18),
+            child: Column(
+              children: [
+                // TO Do Weather section
+                const Flexible (
+                  flex: 2,
+                  child: WeatherSection(),
                 ),
-              ),
-              // To Do Beaking news section
-              Flexible(
-                flex: 2,
-                child: Container(
-                  color: Colors.red,
+                // To Do Beaking news section
+                Flexible(
+                  flex: 2,
+                  child: Container(
+                    color: Colors.red,
+                  ),
                 ),
-              ),
-              // To Do Covid statistics section
-              Flexible(
-                flex: 1,
-                child: Container(
-                  color: Colors.green,
+                // To Do Covid statistics section
+                Flexible(
+                  flex: 1,
+                  child: Container(
+                    color: Colors.green,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
