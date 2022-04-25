@@ -8,11 +8,11 @@ class WeatherSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) =>
-          _buildNormalContainer(constraints.maxHeight, context),
+          _buildWeatherSection(constraints.maxHeight, context),
     );
   }
 
-  Widget _buildNormalContainer(double heightOfSection, BuildContext context) {
+  Widget _buildWeatherSection(double heightOfSection, BuildContext context) {
     return Column(
       children: [
         Container(
@@ -103,6 +103,31 @@ class WeatherSection extends StatelessWidget {
             ),
           ),
         ),
+        SizedBox(
+          height: heightOfSection * 0.045,
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'Breaking News',
+              style: Theme.of(context)
+                  .textTheme
+                  .titleLarge
+                  ?.copyWith(fontWeight: FontWeight.bold),
+            ),
+            TextButton(
+              onPressed: () {},
+              child: Text(
+                'More',
+                style: Theme.of(context)
+                    .textTheme
+                    .titleMedium
+                    ?.copyWith(fontWeight: FontWeight.bold),
+              ),
+            )
+          ],
+        )
       ],
     );
   }
