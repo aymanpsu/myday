@@ -57,23 +57,24 @@ class WeatherSection extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    RichText(
-                      text: TextSpan(
-                        text: '27',
-                        style: Theme.of(context)
-                            .textTheme
-                            .displayLarge
-                            ?.copyWith(fontSize: 65),
-                        children: <TextSpan>[
-                          TextSpan(
-                            text: '°C',
-                            style: Theme.of(context)
-                                .textTheme
-                                .headlineMedium
-                                ?.copyWith(fontWeight: FontWeight.bold),
-                          ),
-                        ],
-                      ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          '27',
+                          style: Theme.of(context)
+                              .textTheme
+                              .displayLarge
+                              ?.copyWith(fontSize: 65),
+                        ),
+                        Text(
+                          '°C',
+                          style: Theme.of(context)
+                              .textTheme
+                              .headlineMedium
+                              ?.copyWith(fontWeight: FontWeight.bold),
+                        ),
+                      ],
                     ),
                     Image.asset('assets/icons/cloudy-day.png'),
                   ],
@@ -85,6 +86,7 @@ class WeatherSection extends StatelessWidget {
                   children: [
                     const Icon(
                       Icons.location_on_outlined,
+                      size: 16.0,
                       color: Colors.white,
                     ),
                     Padding(

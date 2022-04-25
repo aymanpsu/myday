@@ -6,8 +6,8 @@ import '../widgets/weather_section.dart';
 // import '../providers/switch_language.dart';
 // import 'package:provider/provider.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
