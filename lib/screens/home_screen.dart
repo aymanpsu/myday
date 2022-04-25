@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import '../utlis/app_lang.dart';
+import '../widgets/weather_section.dart';
 
 // **Use when you are ready tu plug state management**
 // import '../providers/switch_language.dart';
 // import 'package:provider/provider.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -39,35 +40,36 @@ class HomePage extends StatelessWidget {
         height: double.infinity,
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/background_1.jpeg'),
+            image: AssetImage('assets/images/background_4.jpeg'),
             fit: BoxFit.cover,
           ),
         ),
         child: SafeArea(
-          child: Column(
-            children: [
-              // TO Do Weather section
-              Flexible(
-                flex: 2,
-                child: Container(
-                  color: Colors.amber,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 18),
+            child: Column(
+              children: [
+                // TO Do Weather section
+                const Flexible (
+                  flex: 2,
+                  child: WeatherSection(),
                 ),
-              ),
-              // To Do Beaking news section
-              Flexible(
-                flex: 2,
-                child: Container(
-                  color: Colors.red,
+                // To Do Beaking news section
+                Flexible(
+                  flex: 2,
+                  child: Container(
+                    color: Colors.red,
+                  ),
                 ),
-              ),
-              // To Do Covid statistics section
-              Flexible(
-                flex: 1,
-                child: Container(
-                  color: Colors.green,
+                // To Do Covid statistics section
+                Flexible(
+                  flex: 1,
+                  child: Container(
+                    color: Colors.green,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

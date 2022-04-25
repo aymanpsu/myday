@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './screens/home.dart';
+import 'screens/home_screen.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import './utlis/app_lang.dart';
 import './utlis/app_theme.dart';
@@ -51,7 +51,7 @@ class MyApp extends StatelessWidget {
             ],
             // TO DO Import my custom theme
             theme: AppTheme(langState.appFontFamily).lightTheme,
-            home: const HomePage(),
+            home: const HomeScreen(),
           );
         },
       ),
