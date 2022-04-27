@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../utlis/app_lang.dart';
 import '../widgets/weather_section.dart';
+import '../widgets/news/breaking_news_section.dart';
 
 // **Use when you are ready tu plug state management**
 // import '../providers/switch_language.dart';
@@ -55,11 +56,9 @@ class HomeScreen extends StatelessWidget {
                   child: WeatherSection(),
                 ),
                 // To Do Beaking news section
-                Flexible(
+                const Flexible(
                   flex: 2,
-                  child: Container(
-                    color: Colors.red,
-                  ),
+                  child: BreakingNewsSection(),
                 ),
                 // To Do Covid statistics section
                 Flexible(

@@ -1,3 +1,4 @@
+import '../utlis/app_lang.dart';
 import 'package:flutter/material.dart';
 import '../services/get_datetime.dart';
 
@@ -26,14 +27,14 @@ class WeatherSection extends StatelessWidget {
           ),
           child: Padding(
             padding: const EdgeInsets.symmetric(
-              horizontal: 12,
+              horizontal: 15,
               vertical: 20,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Today',
+                  AppLocalizations.of(context)!.translate('today')!,
                   style: Theme.of(context)
                       .textTheme
                       .headlineMedium
@@ -60,6 +61,7 @@ class WeatherSection extends StatelessWidget {
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+                        // To do fetch the latest weather tempatrue bsed on loaction
                         Text(
                           '27',
                           style: Theme.of(context)
@@ -76,6 +78,7 @@ class WeatherSection extends StatelessWidget {
                         ),
                       ],
                     ),
+                    // To do change this asset based on weather condations
                     Image.asset('assets/icons/cloudy-day.png'),
                   ],
                 ),
@@ -91,6 +94,7 @@ class WeatherSection extends StatelessWidget {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(left: 4.0),
+                      // To do get device loaction (adress and city)
                       child: Text(
                         'Abu Shuaib, Al Khaleej, Riyadh 13224',
                         style: Theme.of(context)
@@ -119,7 +123,9 @@ class WeatherSection extends StatelessWidget {
                   ?.copyWith(fontWeight: FontWeight.bold),
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                // To Do here navigate to breaking news page show all the news
+              },
               child: Text(
                 'More',
                 style: Theme.of(context)
