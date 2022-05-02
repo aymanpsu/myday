@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../utlis/app_lang.dart';
 import '../widgets/weather_section.dart';
 import '../widgets/news/breaking_news_section.dart';
+import '../widgets/covid_statistics_section.dart';
 
 // **Use when you are ready tu plug state management**
 // import '../providers/switch_language.dart';
@@ -41,7 +42,7 @@ class HomeScreen extends StatelessWidget {
         height: double.infinity,
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/background_4.jpeg'),
+            image: AssetImage('assets/images/background_5.jpeg'),
             fit: BoxFit.cover,
           ),
         ),
@@ -49,23 +50,21 @@ class HomeScreen extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 18),
             child: Column(
-              children: [
+              children: const [
                 // TO Do Weather section
-                const Flexible (
+                Flexible (
                   flex: 2,
                   child: WeatherSection(),
                 ),
                 // To Do Beaking news section
-                const Flexible(
+                Flexible(
                   flex: 2,
                   child: BreakingNewsSection(),
                 ),
                 // To Do Covid statistics section
                 Flexible(
                   flex: 1,
-                  child: Container(
-                    color: Colors.green,
-                  ),
+                  child: CovidStatisticsSection(),
                 ),
               ],
             ),

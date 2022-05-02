@@ -20,7 +20,7 @@ class WeatherSection extends StatelessWidget {
           width: double.infinity,
           height: heightOfSection * 0.80,
           decoration: const BoxDecoration(
-            color: Color.fromARGB(112, 71, 184, 245),
+            color: Color.fromARGB(108, 175, 196, 233),
             borderRadius: BorderRadius.all(
               Radius.circular(15),
             ),
