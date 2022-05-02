@@ -42,7 +42,7 @@ class HomeScreen extends StatelessWidget {
         height: double.infinity,
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/background_4.jpeg'),
+            image: AssetImage('assets/images/background_5.jpeg'),
             fit: BoxFit.cover,
           ),
         ),

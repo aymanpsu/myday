@@ -16,13 +16,13 @@ class CovidStatisticsSection extends StatelessWidget {
     return Column(
       children: [
         SizedBox(
-          height: heightOfSection * 0.02,
+          height: heightOfSection * 0.005,
         ),
         Container(
           width: double.infinity,
           height: heightOfSection * 0.70,
           decoration: const BoxDecoration(
-            color: Color.fromARGB(112, 71, 184, 245),
+            color: Color.fromARGB(122, 153, 178, 221),
             borderRadius: BorderRadius.all(
               Radius.circular(15),
             ),
@@ -35,8 +35,7 @@ class CovidStatisticsSection extends StatelessWidget {
                 children: [
                   const Text(
                     '549k',
-                    style:
-                        TextStyle(fontSize: 37, fontWeight: FontWeight.normal),
+                    style: TextStyle(fontSize: 37, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(
                     height: 5,
@@ -46,7 +45,7 @@ class CovidStatisticsSection extends StatelessWidget {
                     style: Theme.of(context)
                         .textTheme
                         .labelSmall
-                        ?.copyWith(fontWeight: FontWeight.w300),
+                        ?.copyWith(fontWeight: FontWeight.w400),
                   ),
                 ],
               ),
@@ -54,9 +53,8 @@ class CovidStatisticsSection extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
-                    '549k',
-                    style:
-                        TextStyle(fontSize: 37, fontWeight: FontWeight.normal),
+                    '8,8k',
+                    style: TextStyle(fontSize: 37, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(
                     height: 5,
@@ -66,7 +64,7 @@ class CovidStatisticsSection extends StatelessWidget {
                     style: Theme.of(context)
                         .textTheme
                         .labelSmall
-                        ?.copyWith(fontWeight: FontWeight.w300),
+                        ?.copyWith(fontWeight: FontWeight.w400),
                   ),
                 ],
               ),
@@ -74,9 +72,11 @@ class CovidStatisticsSection extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
-                    '549k',
-                    style:
-                        TextStyle(fontSize: 37, fontWeight: FontWeight.normal),
+                    '—',
+                    style: TextStyle(
+                      fontSize: 37,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                   const SizedBox(
                     height: 5,
@@ -86,7 +86,7 @@ class CovidStatisticsSection extends StatelessWidget {
                     style: Theme.of(context)
                         .textTheme
                         .labelSmall
-                        ?.copyWith(fontWeight: FontWeight.w300),
+                        ?.copyWith(fontWeight: FontWeight.w400),
                   ),
                 ],
               ),
