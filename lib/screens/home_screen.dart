@@ -3,6 +3,7 @@ import '../utlis/app_lang.dart';
 import '../widgets/weather_section.dart';
 import '../widgets/news/breaking_news_section.dart';
 import '../widgets/covid_statistics_section.dart';
+import '../widgets/settings_bottom_sheet.dart';
 
 // **Use when you are ready tu plug state management**
 // import '../providers/switch_language.dart';
@@ -30,6 +31,22 @@ class HomeScreen extends StatelessWidget {
           IconButton(
             onPressed: () {
               // To Do bottom sheet widget show settings
+              showModalBottomSheet(
+                constraints: BoxConstraints.tight(Size(
+                  double.infinity,
+                  MediaQuery.of(context).size.height * 0.35,
+                )),
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(10),
+                    topLeft: Radius.circular(10),
+                  ),
+                ),
+                context: context,
+                builder: (BuildContext ctx) {
+                  return const SettingsBottomSheet();
+                },
+              );
             },
             icon: const Icon(Icons.settings_outlined),
           )
@@ -52,7 +69,7 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               children: const [
                 // TO Do Weather section
-                Flexible (
+                Flexible(
                   flex: 2,
                   child: WeatherSection(),
                 ),
