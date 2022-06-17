@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/language_item.dart';
 
 class SettingsBottomSheet extends StatelessWidget {
   const SettingsBottomSheet({Key? key}) : super(key: key);
@@ -29,54 +30,25 @@ class SettingsBottomSheet extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 10.0,
+              height: 20.0,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: const [
-                Radio(
-                  value: true,
-                  groupValue: true,
-                  onChanged: null,
-                  splashRadius: 20,
-                  toggleable: true,
-                  visualDensity: VisualDensity.standard,
-                  activeColor: Colors.green,
+            ListView(
+              scrollDirection: Axis.vertical,
+              physics: const NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              children: const <LanguageItem>[
+                LanguageItem(
+                  name: 'English',
+                  state: true,
                 ),
-                Text(
-                'English',
-                style: TextStyle(
-                  fontSize: 16.0,
-                  color: Colors.black,
-                  fontWeight: FontWeight.normal,
+                LanguageItem(
+                  name: 'العربية',
+                  state: false,
                 ),
-              ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: const [
-                Radio(
-                  value: true,
-                  groupValue: false,
-                  onChanged: null,
-                  splashRadius: 20,
-                  toggleable: true,
-                  visualDensity: VisualDensity.standard,
-                  activeColor: Colors.green,
-                ),
-                Text(
-                'العربية',
-                style: TextStyle(
-                  fontSize: 16.0,
-                  color: Colors.black,
-                  fontWeight: FontWeight.normal,
-                ),
-              ),
               ],
             ),
             const SizedBox(
-              height: 15.0,
+              height: 5.0,
             ),
             const Text(
               'Theme',
