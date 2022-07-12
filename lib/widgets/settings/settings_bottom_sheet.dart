@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../widgets/select_language_section.dart';
-import '../widgets/select_theme_section.dart';
+import 'select_language_section.dart';
+import 'select_theme_section.dart';
 
 class SettingsBottomSheet extends StatelessWidget {
   const SettingsBottomSheet({Key? key}) : super(key: key);

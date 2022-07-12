@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../widgets/language_item.dart';
+import 'language_item.dart';
 
 class SelectLnaguage extends StatelessWidget {
   const SelectLnaguage({Key? key}) : super(key: key);

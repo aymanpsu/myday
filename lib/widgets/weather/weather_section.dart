@@ -1,6 +1,6 @@
-import '../utlis/app_lang.dart';
+import '../../utlis/app_lang.dart';
 import 'package:flutter/material.dart';
-import '../services/get_datetime.dart';
+import '../../services/get_datetime.dart';
 
 class WeatherSection extends StatelessWidget {
   const WeatherSection({Key? key}) : super(key: key);

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import '../utlis/app_lang.dart';
-import '../widgets/weather_section.dart';
+import '../widgets/weather/weather_section.dart';
 import '../widgets/news/breaking_news_section.dart';
 import '../widgets/covid_statistics_section.dart';
-import '../widgets/settings_bottom_sheet.dart';
+import '../widgets/settings/settings_bottom_sheet.dart';
 
 // **Use when you are ready tu plug state management**
 // import '../providers/switch_language.dart';
