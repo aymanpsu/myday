@@ -62,13 +62,21 @@ class HorizontalNewsItem extends StatelessWidget {
                         const SizedBox(
                           height: 15.0,
                         ),
-                        Text(
-                          publishedTime,
-                          style: const TextStyle(
-                            fontSize: 10,
-                            fontWeight: FontWeight.w300,
-                            color: Colors.black,
-                          ),
+                        Row(
+                          children: [
+                            const Icon(
+                              Icons.watch_later_outlined,
+                              size: 12,
+                            ),
+                            Text(
+                              ' $publishedTime',
+                              style: const TextStyle(
+                                fontSize: 10,
+                                fontWeight: FontWeight.w300,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ],
                         ),
                         const SizedBox(
                           height: 4.0,
