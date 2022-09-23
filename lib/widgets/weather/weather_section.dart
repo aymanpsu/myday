@@ -1,6 +1,7 @@
-import '../utlis/app_lang.dart';
+import '../../utlis/app_lang.dart';
 import 'package:flutter/material.dart';
-import '../services/get_datetime.dart';
+import '../../services/get_datetime.dart';
+import '../../utlis/app_colors.dart';
 
 class WeatherSection extends StatelessWidget {
   const WeatherSection({Key? key}) : super(key: key);
@@ -20,7 +21,7 @@ class WeatherSection extends StatelessWidget {
           width: double.infinity,
           height: heightOfSection * 0.80,
           decoration: const BoxDecoration(
-            color: Color.fromARGB(108, 175, 196, 233),
+            color: AppColors.lightBackgroundColor,
             borderRadius: BorderRadius.all(
               Radius.circular(15),
             ),

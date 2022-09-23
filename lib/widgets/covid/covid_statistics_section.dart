@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../utlis/app_colors.dart';
 
 class CovidStatisticsSection extends StatelessWidget {
   const CovidStatisticsSection({Key? key}) : super(key: key);
@@ -22,7 +23,7 @@ class CovidStatisticsSection extends StatelessWidget {
           width: double.infinity,
           height: heightOfSection * 0.70,
           decoration: const BoxDecoration(
-            color: Color.fromARGB(122, 153, 178, 221),
+            color: AppColors.lightBackgroundColor,
             borderRadius: BorderRadius.all(
               Radius.circular(15),
             ),
@@ -72,7 +73,7 @@ class CovidStatisticsSection extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
-                    '—',
+                    '-',
                     style: TextStyle(
                       fontSize: 37,
                       fontWeight: FontWeight.bold,
